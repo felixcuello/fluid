@@ -5,6 +5,12 @@ require 'factory_bot'
 
 FactoryBot.define do
   factory :world do
-    objects { FFaker::Random.rand(10..50).times.map { build(:particle) } }
+    objects { [] }
+
+    initialize_with { World.instance }
+
+    trait :with_randomized_particles do
+      objects { FactoryBot.build_list(:particle, FFaker::Random.rand(10..50)) }
+    end
   end
 end

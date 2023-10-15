@@ -1,7 +1,16 @@
 # frozen_string_literal: true
 
-require 'ruby2d'
+$LOAD_PATH.unshift('./lib')
 
-set title: 'Fluid Simulation'
+require 'world'
+require 'particle'
 
-show
+world = World.instance
+
+rand(10..50).times do
+  x = rand(640)
+  y = rand(480)
+  world.add_object(Particle.new(x:, y:))
+end
+
+world.spin!
