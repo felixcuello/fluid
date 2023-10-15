@@ -9,7 +9,7 @@ all:
 	@echo " make check                              # Run the linter"
 
 run:
-	ruby ./bin/run.rb
+	ruby bin/run.rb
 
 check:
 	bundle exec rubocop
