@@ -9,5 +9,7 @@ class Object2d
     @y = y
     @vx = vx
     @vy = vy
+
+    @color = 'random'
   end
 end
