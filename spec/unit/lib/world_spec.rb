@@ -13,7 +13,7 @@ describe World do
       expect(world).to be_a World
       expect(world.width).to eq width
       expect(world.height).to eq height
-      expect(world.objects).to be_empty
+      expect(world.particles).to be_empty
     end
 
     it 'must only be one world' do
@@ -28,7 +28,7 @@ describe World do
     let(:world) { FactoryBot.build(:world, :with_randomized_particles) }
 
     it 'must have particles' do
-      expect(world.objects).not_to be_empty
+      expect(world.particles).not_to be_empty
     end
   end
 
@@ -38,7 +38,7 @@ describe World do
     it 'must add the particle to the world' do
       world.add_particle(particle)
 
-      expect(world.objects).to include particle
+      expect(world.particles).to include particle
     end
   end
 end

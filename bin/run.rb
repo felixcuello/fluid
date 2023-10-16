@@ -7,10 +7,10 @@ require 'particle'
 
 world = World.instance
 
-rand(10..50).times do
+100.times do
   x = rand(640)
   y = rand(480)
-  world.add_object(Particle.new(x:, y:))
+  world.add_particle(Particle.new(x:, y:))
 end
 
 world.spin!

@@ -2,7 +2,7 @@
 
 # Particle class
 class Object2d
-  attr_accessor :x, :y, :vx, :vy
+  attr_accessor :x, :y, :vx, :vy, :color
 
   def initialize(x: 0, y: 0, vx: 0, vy: 0) # rubocop:disable Naming/MethodParameterName
     @x = x
