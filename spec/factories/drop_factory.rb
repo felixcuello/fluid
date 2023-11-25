@@ -4,7 +4,7 @@ require 'ffaker'
 require 'factory_bot'
 
 FactoryBot.define do
-  factory :particle do
+  factory :drop do
     x { FFaker::Random.rand(0..100) }
     y { FFaker::Random.rand(0..100) }
 
