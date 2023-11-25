@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Particle class
+# Object 2d class
 class Object2d
   attr_accessor :x, :y, :vx, :vy, :color
 
